@@ -1,1 +1,18 @@
-google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+# ==============================================================================
+# ads.txt — Authorized Digital Sellers & Ad Configuration Reference
+# Note: HTML <script> tags cannot execute from ads.txt directly.
+# They are actively configured and rendered across the website via /js/ads.js
+# ==============================================================================
+
+# [1] Adsterra 468x60 Banner (Slot Aspect Ratio: 39:5 ≈ 7.8:1)
+# Key: f9ae7344304cd327fd84a422ebbae364
+# Script: https://czernik.org/22/f9ae7344304cd327fd84a422ebbae364
+
+# [2] Adsterra Popunder / Direct Script:
+# Script: https://capitalhospitals.org/1/1cdad989be4749f71e0df75abf13ce95
+
+# [3] Adsterra Social Bar / In-Page Push:
+# Script: https://czernik.org/14/b052e6602d330113f4f9162ab0ba5ed8
+
+# Standard IAB ads.txt publisher records can be appended below:
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

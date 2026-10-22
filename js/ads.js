@@ -1,17 +1,21 @@
 /* ==========================================================
-   AD SETUP — sirf yahan values bharo. Jo use nahi karna, khali chhod do.
+   AD SETUP — Sirf yahan values bharo. Jo use nahi karna, khali chhod do.
    ========================================================== */
 const AD_CONFIG = {
   adsense:            "",   // "ca-pub-1234567890123456"
   monetag:            "",   // "1234567"   (Monetag zone id)
-  adsterraPopunder:   "",   // "//pl123456.profitablecpmgate.com/xx/xx/xx/invoke.js"
-  adsterraSocialBar:  ""    // "//pl123456.profitablecpmgate.com/xx/xx/xx/invoke.js"
+  adsterraPopunder:   "https://capitalhospitals.org/1/1cdad989be4749f71e0df75abf13ce95",
+  adsterraSocialBar:  "https://czernik.org/14/b052e6602d330113f4f9162ab0ba5ed8"
 };
 
 (function () {
-  /* ---- placeholder text jab tak koi ad network nahi laga ---- */
+  /* ---- Placeholder text sirf empty ad slots ke liye ---- */
   if (!AD_CONFIG.adsense) {
-    document.querySelectorAll('.ad').forEach(d => { d.textContent = 'AD SLOT'; });
+    document.querySelectorAll('.ad').forEach(d => {
+      if (!d.children.length && !d.textContent.trim()) {
+        d.textContent = 'AD SLOT';
+      }
+    });
   }
 
   /* ---- Google AdSense ---- */
@@ -43,6 +47,7 @@ const AD_CONFIG = {
   if (AD_CONFIG.adsterraPopunder) {
     const s = document.createElement('script');
     s.src = AD_CONFIG.adsterraPopunder;
+    s.setAttribute('data-cfasync', 'false');
     s.async = true;
     document.head.appendChild(s);
   }
@@ -51,6 +56,7 @@ const AD_CONFIG = {
   if (AD_CONFIG.adsterraSocialBar) {
     const s = document.createElement('script');
     s.src = AD_CONFIG.adsterraSocialBar;
+    s.setAttribute('data-cfasync', 'false');
     s.async = true;
     document.head.appendChild(s);
   }
